@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(141, 176, 223, 0.769);
+}
+
+.container-slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px 80px;
+    display: flex;
+    gap: 6px;
+}
+
+.btn {
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 38px;
+    cursor: pointer;
+}
+
+.btn-left {
+    left: 0;
+}
+
+.btn-right {
+    right: 0;
+}
+
+.slideshow {
+    position: relative;
+    width: 4%;
+    opacity: 0.4;
+    transition: all ease .8s;
+}
+
+.open.slideshow {
+    width: 100%;
+    opacity: 1;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.img-1{
+    background-image: url(../img/pokemon.jpg);
+}
+
+.img-2{
+    background-image: url(../img/doraemon.jpg);
+}
+
+.img-3{
+    background-image: url(../img/conan.jpg);
+}
+
+.img-4{
+    background-image: url(../img/minions.jpg);
+}
+
+.img-5{
+    background-image: url(../img/2consau.jpg);
+}
+
+.img-6{
+    background-image: url(../img/tomandjerry.jpg);
+}
+
+.img-7{
+    background-image: url(../img/oggy.jpg);
+}
+
+.slideshow .title{
+    position: absolute;
+    font-size: 1.6rem;
+    font-weight: 700;
+    bottom: 6px;
+    left: 6px;
+    padding: 2px 6px;
+    border: 1px solid #333;
+    box-shadow: 1px 1px #333;
+    background-color: rgb(249, 246, 246);
+    color: rgb(186, 123, 28);
+    border-radius: 20px;
+    display: none;
+}
+
+.slideshow.open .title{
+    display: block;
+}
+
+.container-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dots{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.dot {
+    padding: 6px;
+    background-color: rgb(47, 39, 39);
+    border-radius: 50%;
+}
+
+.dot-open {
+    background-color: #fff;
+}
